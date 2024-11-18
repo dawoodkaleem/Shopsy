@@ -1,9 +1,9 @@
 // import React from 'react'
-import Image1 from "../../assets/Shopping1.jpg";
+import Image1 from "../../assets/Shopping1.png";
 import Image2 from "../../assets/Shopping2.png";
 import Image3 from "../../assets/Shoping3.png";
 import Slider from "react-slick";
-
+import PropTypes from "prop-types";
 const ImageList = [
   {
     id: 1,
@@ -28,7 +28,7 @@ const ImageList = [
   },
 ];
 
-function Hero() {
+function Hero({ handeleOrderPopup }) {
   const settings = {
     dots: false,
     arrows: false,
@@ -87,7 +87,11 @@ function Hero() {
                     data-aos="fade-up"
                     data-aos-duration="500"
                     data-aos-delay="300">
-                    <button className=" bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full">
+                    <button
+                      className=" bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
+                      onClick={() => {
+                        handeleOrderPopup();
+                      }}>
                       Order Now
                     </button>
                   </div>
@@ -115,5 +119,7 @@ function Hero() {
     </div>
   );
 }
-
+Hero.propTypes = {
+  handeleOrderPopup: PropTypes.func.isRequired, // Expects a function
+};
 export default Hero;
