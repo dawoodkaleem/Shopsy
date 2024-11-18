@@ -1,8 +1,9 @@
 // import React from "react";
-import Img1 from "../../assets/shirts/shirt1.jpg";
-import Img2 from "../../assets/shirts/shirt2.jpg";
-import Img3 from "../../assets/shirts/shirt3.jpg";
+import Img1 from "../../assets/shirts/Shirts1.png";
+import Img2 from "../../assets/shirts/Shirts2.png";
+import Img3 from "../../assets/shirts/Shirts3.png";
 import { FaStar } from "react-icons/fa";
+import PropTypes from "prop-types";
 const ProductsData = [
   {
     id: 1,
@@ -26,7 +27,7 @@ const ProductsData = [
       " Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ullam praesentium. Ab, nobis",
   },
 ];
-const TopProducts = () => {
+const TopProducts = ({ handeleOrderPopup }) => {
   return (
     <div>
       <div className="container">
@@ -71,8 +72,11 @@ const TopProducts = () => {
                 <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2">
                   {data.description}
                 </p>
-                <button className="bg:primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary">
-                  {" "}
+                <button
+                  className="bg:primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary "
+                  onClick={() => {
+                    handeleOrderPopup();
+                  }}>
                   Order Now
                 </button>
               </div>
@@ -82,6 +86,9 @@ const TopProducts = () => {
       </div>
     </div>
   );
+};
+TopProducts.propTypes = {
+  handeleOrderPopup: PropTypes.func.isRequired, // Expects a function
 };
 
 export default TopProducts;
