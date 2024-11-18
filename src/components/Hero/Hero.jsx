@@ -1,7 +1,7 @@
 // import React from 'react'
-import Image1 from "../../assets/Shopping1.png";
-import Image2 from "../../assets/Shopping2.png";
-import Image3 from "../../assets/Shoping3.png";
+import Image1 from "../../assets/Shopping.png";
+import Image2 from "../../assets/Shopping1.png";
+import Image3 from "../../assets/Shopping4.png";
 import Slider from "react-slick";
 import PropTypes from "prop-types";
 const ImageList = [
@@ -106,7 +106,7 @@ function Hero({ handeleOrderPopup }) {
                       src={data.img}
                       alt=""
                       className="w-[300px] h-[300px] sm:w-[450px] sm:w-[450px] sm:scale-125 object-contain 
-                      lg:scale-120
+                      lg:scale-100
                       mx-auto "
                     />
                   </div>
