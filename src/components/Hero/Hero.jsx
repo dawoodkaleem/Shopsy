@@ -105,7 +105,7 @@ function Hero({ handeleOrderPopup }) {
                     <img
                       src={data.img}
                       alt=""
-                      className="w-[300px] h-[300px] sm:w-[450px] sm:w-[450px] sm:scale-125 object-contain 
+                      className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-125 object-contain 
                       lg:scale-100
                       mx-auto "
                     />
